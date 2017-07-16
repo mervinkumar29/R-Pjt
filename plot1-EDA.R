@@ -1,0 +1,5 @@
+setwd("e:/Coursera/Work/Data-R/")
+x<-read.table("household_power_consumption.txt",sep=';',header = TRUE,na.strings = "?")
+plot1<-hist(x$Global_active_power, col = "red", main = paste("Histogram of Global Active Power"), xlab = "Global Active Power (kilowatts)")
+dev.copy(png,file="plot1.png")
+dev.off()
