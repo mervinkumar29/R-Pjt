@@ -37,5 +37,5 @@ names(single_Data) <- gsub('\\.mean',".Mean",names(single_Data))
 names(single_Data) <- gsub('\\.std',".StandardDeviation",names(single_Data))
 names(single_Data) <- gsub('Freq\\.',"Frequency.",names(single_Data))
 names(single_Data) <- gsub('Freq$',"Frequency",names(single_Data))
-mean_data<-aggregate(. ~Subject + Activity, single_DataSet, mean)
+mean_data<-aggregate(. ~Subject + Activity, single_Data, mean)
 mean_data<-mean_data[order(mean_data$Subject,mean_data$Activity),]
